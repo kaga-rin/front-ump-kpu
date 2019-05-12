@@ -10,6 +10,8 @@ import vSelect from "vue-select";
 
 Vue.component("v-select", vSelect);
 import "vue-select/dist/vue-select.css";
+import vueHeadful from "vue-headful";
+Vue.component("vhd", vueHeadful);
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {

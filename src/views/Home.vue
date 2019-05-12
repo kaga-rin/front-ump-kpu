@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <vhd title="KPU UMP" description="Welcome to KPU UMP"></vhd>
     <div class="jumbotron bg-white text-center pt-5 pb-2">
       <div class="image pb-3 animated zoomIn">
         <img
