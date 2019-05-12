@@ -9,20 +9,7 @@ export default new Router({
     {
       path: "/",
       name: "home",
-      component: Home,
-      meta: {
-        title: "UMP KPU",
-        metaTags: [
-          {
-            name: "UMP KPU",
-            content: "KPU UMP ELECTION"
-          },
-          {
-            property: "og:description",
-            content: "KPU UMP ELECTION."
-          }
-        ]
-      }
+      component: Home
     },
     {
       path: "/cek",
@@ -31,6 +18,14 @@ export default new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ "./views/cek.vue")
+    },
+    {
+      path: "/count",
+      name: "count",
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import(/* webpackChunkName: "about" */ "./views/count.vue")
     },
     {
       path: "*",

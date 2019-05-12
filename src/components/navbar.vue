@@ -32,9 +32,9 @@
           </router-link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://localhost/kpu/counting">
+          <router-link class="nav-link" active-class="active" to="/count">
             <font-awesome-icon icon="chart-pie" /> REAL COUNT
-          </a>
+          </router-link>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">

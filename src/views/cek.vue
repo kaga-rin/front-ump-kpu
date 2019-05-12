@@ -1,5 +1,9 @@
 <template>
   <div class="cek">
+    <vhd
+      title="Lindungi Hak Pilih Anda - KPU UMP"
+      description="Periksa kedaftaran anda di KPU UMP"
+    ></vhd>
     <div class="jumbotron bg-white text-center pt-5 pb-2">
       <div class="image animated zoomIn">
         <img
@@ -22,7 +26,7 @@
                   class="card-header text-center text-light bg-blue-dark mb-0"
                 >
                   <h5 class="mb-0 bold">
-                    <font-awesome-icon icon="check" /> Cek Data
+                    <font-awesome-icon icon="check" />Cek Data
                   </h5>
                 </div>
                 <div class="card-body">
@@ -142,6 +146,7 @@
 <script>
 var _ = require("lodash");
 const axios = require("axios");
+var base = "https://kpu.ump.ac.id/api/";
 export default {
   name: "cek",
   data() {
@@ -183,7 +188,7 @@ export default {
         formData.append("nim", this.nim);
         formData.append("name", nama);
         axios
-          .post("http://localhost/kpu/cek/match", formData, {
+          .post(`${base}cek/match`, formData, {
             headers: {
               "Content-Type": "multipart/form-data"
             }
@@ -192,12 +197,10 @@ export default {
             var data = response.data;
             this.status = data.status;
             if (data.status) {
-              console.log(data);
               this.message = data.message;
               this.submit = false;
               this.status = true;
             } else {
-              console.log(data);
               this.message = data.message;
               this.submit = false;
               this.status = false;
@@ -212,7 +215,7 @@ export default {
       }
     },
     search: _.debounce((loading, search, vm) => {
-      fetch(`http://localhost/kpu/cek/data/${escape(search)}`).then(res => {
+      fetch(`${base}cek/data/${escape(search)}`).then(res => {
         res.json().then(json => (vm.options = json));
         loading(false);
       });
