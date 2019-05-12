@@ -25,7 +25,8 @@ import {
   faAddressBook,
   faSearch,
   faSpinner,
-  faCheckCircle
+  faCheckCircle,
+  faTimesCircle
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
@@ -40,7 +41,8 @@ library.add([
   faAddressBook,
   faSearch,
   faSpinner,
-  faCheckCircle
+  faCheckCircle,
+  faTimesCircle
 ]);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);

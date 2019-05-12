@@ -4,7 +4,7 @@
     <div class="jumbotron bg-white text-center pt-5 pb-2">
       <div class="image pb-3 animated zoomIn">
         <img
-          src="https://kpumump.files.wordpress.com/2013/04/kpu-ump.jpg"
+          src="https://kpu.ump.ac.id/assets/img/kpu-ump.jpg"
           width="120"
           height="120"
           class="img-fluid"
@@ -27,7 +27,7 @@
               <div class="image text-center p-3">
                 <img
                   class="rounded-circle"
-                  src="https://souvenirminiatur.com/wp-content/uploads/2019/04/sample-image-600x600.png"
+                  :src="people(index)"
                   width="250"
                   height="auto"
                   alt="Calon"
@@ -72,6 +72,16 @@ export default {
         $(this).removeClass("shadow-box-lg");
       }
     );
+  },
+  methods: {
+    people(index) {
+      let img = [
+        "https://kpu.ump.ac.id/assets/img/bman.png",
+        "https://kpu.ump.ac.id/assets/img/boy.png",
+        "https://kpu.ump.ac.id/assets/img/worker.png"
+      ];
+      return img[index];
+    }
   }
 };
 </script>

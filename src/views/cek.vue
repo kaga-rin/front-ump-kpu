@@ -7,7 +7,7 @@
     <div class="jumbotron bg-white text-center pt-5 pb-2">
       <div class="image animated zoomIn">
         <img
-          src="assets/img/kpu-ump.jpg"
+          src="https://kpu.ump.ac.id/assets/img/kpu-ump.jpg"
           width="120"
           height="120"
           class="img-fluid"
@@ -26,7 +26,7 @@
                   class="card-header text-center text-light bg-blue-dark mb-0"
                 >
                   <h5 class="mb-0 bold">
-                    <font-awesome-icon icon="check" />Cek Data
+                    <font-awesome-icon icon="check" /> Cek Data
                   </h5>
                 </div>
                 <div class="card-body">
@@ -120,7 +120,7 @@
           <div class="card search">
             <div class="card-header text-center text-light bg-blue-dark">
               <h5 class="mb-0 bold">
-                <font-awesome-icon icon="check" />Hasil data
+                <font-awesome-icon icon="check" /> Hasil data
               </h5>
             </div>
             <div class="card-body">
@@ -130,8 +130,10 @@
               >
                 <div class="message">
                   <span>
-                    <font-awesome-icon icon="check-circle" />
-                    {{ message }}
+                    <font-awesome-icon icon="check-circle" v-if="status" />
+                    <font-awesome-icon icon="times-circle" v-else />
+                    &nbsp;
+                    <span v-html="message"></span>
                   </span>
                 </div>
               </div>
@@ -223,7 +225,7 @@ export default {
   },
   watch: {
     nim() {
-      if (this.nim.length < 10) {
+      if (this.nim.length < 10 || this.nim.length > 10) {
         this.digit = true;
       } else {
         this.digit = false;

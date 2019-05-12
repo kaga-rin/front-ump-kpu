@@ -1,5 +1,5 @@
 <template>
-  <div class="footer text-center pt-3 pb-3">
+  <div class="footer text-center mt-5">
     <div class="container-fluid">
       <small class="bold text-muted">Powered By UTech</small>
     </div>

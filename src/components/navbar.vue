@@ -2,7 +2,7 @@
   <nav class="navbar navbar-1 navbar-expand-lg navbar-dark bg-blue-dark">
     <a class="navbar-brand" href="#">
       <img
-        src="assets/img/kpu-ump.png"
+        src="https://kpu.ump.ac.id/assets/img/kpu-ump.png"
         width="35"
         height="35"
         alt="small logo kpu"
@@ -36,7 +36,7 @@
             <font-awesome-icon icon="chart-pie" /> REAL COUNT
           </router-link>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="#">
             <font-awesome-icon icon="chart-bar" /> MENU 1
           </a>
@@ -45,7 +45,7 @@
           <a class="nav-link" href="#">
             <font-awesome-icon icon="calendar-check" /> MENU 2
           </a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </nav>

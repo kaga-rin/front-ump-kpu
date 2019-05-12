@@ -7,7 +7,7 @@
     <div class="jumbotron bg-white text-center pt-5 pb-2">
       <div class="image animated zoomIn">
         <img
-          src="assets/img/kpu-ump.jpg"
+          src="https://kpu.ump.ac.id/assets/img/kpu-ump.jpg"
           width="120"
           height="120"
           class="img-fluid"
@@ -21,13 +21,12 @@
     <div class="cart" id="counting">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-3 ml-auto mr-auto p-0">
+          <div class="col-sm-3 mx-auto p-0 my-0">
             <canvas id="myChart" height="auto" width="auto"></canvas>
           </div>
         </div>
       </div>
     </div>
-    <canvas id="myChart"></canvas>
   </div>
 </template>
 
